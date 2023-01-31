@@ -13,7 +13,9 @@ function App() {
         <Header />
         <Categories />
       </div>
-      <Results />
+      <div className="results">
+        <Results />
+      </div>
       <Footer />
     </div>
   );

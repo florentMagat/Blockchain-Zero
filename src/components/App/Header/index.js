@@ -10,7 +10,7 @@ import './styles.scss';
 
 function Header() {
   return (
-    <Navbar bg="light" expand="lg" className='navBar'>
+    <Navbar bg="light" expand="lg" className="header_navBar">
       <Container fluid>
         <Navbar.Brand href="#">Menu</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -20,7 +20,7 @@ function Header() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Accueil</Nav.Link>
+            <Nav.Link href="#action1">Top 100</Nav.Link>
             <Nav.Link href="#action2">Simulateur</Nav.Link>
             <NavDropdown title="Liens utiles" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
@@ -38,6 +38,7 @@ function Header() {
           </Nav>
           <Form className="d-flex">
             <Form.Control
+              expand="xl"
               type="search"
               placeholder="Nom du projet"
               className="me-2"

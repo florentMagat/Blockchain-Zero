@@ -1,0 +1,20 @@
+.result{
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+}
+
+.result_presentation{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem 0 1rem;
+}
+
+.result_presentation_rank{
+    font-weight: 300;
+    font-size: large;
+}
+
+.result_image{
+    width: 25%;
+    display: flex;
+}
