@@ -54,6 +54,7 @@
     "prop-types": "*",
     "react": "*",
     "react-bootstrap": "^2.7.0",
-    "react-dom": "*"
+    "react-dom": "*",
+    "react-router-dom": "^6.8.1"
   }
 }

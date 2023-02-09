@@ -1,16 +1,27 @@
 .app{
-    padding-left: 1vw;
-    padding-right: 1vw;
+    background-color: #ffffff;
 }
 
+// Je souhaite laisser toujours apparent mon menu et les choix de classement
 .sticky{
     position: sticky;
+    background-color: #ffffff;
+    top: 0;
+    z-index: 1;
 }
 
 .results{
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
+}
 
-    // display: grid;
-    // grid-template-columns: repeat(5, 1fr);
+.dark {
+    background-color: #333;
+    color: #fff;
+    }
+    
+.light {
+    background-color: #fff;
+    color: #333;
 }
