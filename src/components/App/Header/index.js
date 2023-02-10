@@ -1,7 +1,8 @@
-//importation des méthodes react
+/* eslint-disable linebreak-style */
+// importation des méthodes react
 import React, { useState, useEffect } from 'react';
 
-//importation des composants
+// importation des composants
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -9,23 +10,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-//importation des styles
+// importation des styles
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.scss';
 
 function Header() {
-  const [theme, setTheme] = useState('light');
-  const {toggleTheme} = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-    } else {
-      setTheme('light');
-    }
-  };
-  useEffect(() => {
-    document.body.className = theme;
-  }, [theme]);
-
   return (
     <Navbar bg="light" expand="lg" className="header_navBar">
       <Container fluid>
@@ -50,7 +39,6 @@ function Header() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <button type="button" onClick={toggleTheme}>Toggle Theme</button>
           <Form className="d-flex">
             <Form.Control
               expand="xl"

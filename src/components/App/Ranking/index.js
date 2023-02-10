@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import Button from 'react-bootstrap/Button';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -5,8 +6,8 @@ import './styles.scss';
 
 function Ranking() {
   return (
-    <div className='categories'>
-      <Button variant="warning" size="md">Classement par capitalisations (décroissant)</Button>{' '}
+    <div className="categories">
+      <Button href="/" variant="warning" size="md">Classement par capitalisations (décroissant)</Button>{' '}
       <Button variant="primary" size="md">Classement par capitalisations (croissant)</Button>{' '}
       <Button variant="success" size="md">Plus fortes hausses (24 H)</Button>{' '}
       <Button variant="danger" size="md">Plus fortes baisses (24 H)</Button>{' '}

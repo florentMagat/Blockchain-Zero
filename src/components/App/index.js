@@ -1,5 +1,7 @@
-//importation des méthodes react
+/* eslint-disable linebreak-style */
+// importation des méthodes react
 import { Route, Routes } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
 // importation de mes composants
 import Ranking from './Ranking';
@@ -10,9 +12,8 @@ import Simulator from './Simulator';
 import NotFound from './NotFound';
 
 import './styles.scss';
-// == Composant
-function App() {
 
+function App() {
   return (
     <div className="app">
       <Header />
@@ -20,13 +21,13 @@ function App() {
         <Route
           path="/"
           element={(
-          <>
-            <Ranking />
-            <div className="results">
-              <Results />
-            </div>
-            <Footer />
-          </>
+            <>
+              <Ranking />
+              <div className="results">
+                <Results />
+              </div>
+              <Footer />
+            </>
           )}
         />
 
