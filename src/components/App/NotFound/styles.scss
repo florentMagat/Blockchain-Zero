@@ -1,3 +1,9 @@
-.notFound_body{
-margin-top: 25vh;
+.notFound_image{
+background-image: url("../../../assets/error_404.jpg");
+background-size: cover;
+height: 100vh;
+}
+
+.fs-3{
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
 }

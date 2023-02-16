@@ -1,0 +1,14 @@
+.underConstruction_image{
+    background-image: url("../../../assets/underConstruction.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+.underConstruction_text{
+    display: flex;
+    color: white;
+    font-style: italic;
+    font-size: xx-large;
+    justify-content: center;
+    padding-top: 10vh;
+}

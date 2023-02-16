@@ -1,7 +1,6 @@
 /* eslint-disable linebreak-style */
 // importation des méthodes react
 import { Route, Routes } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
 
 // importation de mes composants
 import Ranking from './Ranking';
@@ -12,6 +11,7 @@ import Simulator from './Simulator';
 import NotFound from './NotFound';
 
 import './styles.scss';
+import Underconstruction from './Underconstruction';
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
           path="/"
           element={(
             <>
-              <Ranking />
+              {/* <Ranking /> */}
               <div className="results">
                 <Results />
               </div>
@@ -31,8 +31,7 @@ function App() {
           )}
         />
 
-        <Route path="/simulator" element={<Simulator />} />
-
+        <Route path="/simulator" element={<Underconstruction />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
