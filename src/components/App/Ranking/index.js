@@ -7,15 +7,10 @@ import './styles.scss';
 function Ranking() {
   return (
     <div className="categories">
-      <Button href="/" variant="warning" size="md">Classement par capitalisations (décroissant)</Button>{' '}
-      <Button variant="primary" size="md">Classement par capitalisations (croissant)</Button>{' '}
-      <Button variant="success" size="md">Plus fortes hausses (24 H)</Button>{' '}
-      <Button variant="danger" size="md">Plus fortes baisses (24 H)</Button>{' '}
-      {/* <Button variant="info" size="sm">Gaming</Button>{' '}
-      <Button variant="light" size="sm">Memes Coins</Button>{' '}
-      <Button variant="dark" size="sm">Autres</Button>
-      <Button variant="secondary" size="sm">Stablecoins</Button>{' '}
-      <Button variant="link" size="sm">Link</Button> */}
+      <Button href="/" variant="warning" size="md">Capitalisations ( Top 100 )</Button>{' '}
+      <Button href="/asc" variant="primary" size="md">Capitalisations ( croissantes )</Button>{' '}
+      <Button href="/volumes/desc" variant="success" size="md">Volumes / 24h ( Top 100 )</Button>{' '}
+      <Button href="/volumes/asc" variant="danger" size="md">Volumes / 24h ( croissant )</Button>{' '}
     </div>
   );
 }

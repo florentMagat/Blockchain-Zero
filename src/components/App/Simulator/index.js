@@ -1,9 +1,7 @@
 /* eslint-disable linebreak-style */
-import Header from '../Header';
 
 function Simulator() {
   return (
-    // <Header />
     <p>EN CONSTRUCTION</p>
   );
 }

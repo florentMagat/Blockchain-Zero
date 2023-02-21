@@ -1,21 +1,24 @@
 /* eslint-disable linebreak-style */
-import React from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
+import { React, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import Result from '../Result';
 
-function Results({ baseURL }) {
-  const [data, setData] = React.useState(null);
+function SearchedResults() {
+  const [data, setData] = useState({});
 
   // appel à axios afin de me connecter à l'API
-  React.useEffect(() => {
-    axios.get(baseURL).then((response) => {
-      setData(response.data);
-    });
-  }, []);
-
   if (!data) return null;
+  React.useEffect(() => {
+    const recherchedCoin = async () => {
+      const response = axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=24h');
+      setData(response.data);
+    };
+
+    recherchedCoin();
+  }, []);
 
   // création d'un nouveau tableau grâce au .map et envoie de celui-ci vers Result
   return (
@@ -27,8 +30,7 @@ function Results({ baseURL }) {
     )));
 }
 
-Results.propTypes = {
-  baseURL: PropTypes.string.isRequired,
+SearchedResults.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -36,4 +38,4 @@ Results.propTypes = {
   ).isRequired,
 };
 
-export default Results;
+export default SearchedResults;

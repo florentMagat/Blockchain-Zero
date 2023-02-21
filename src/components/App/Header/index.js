@@ -1,6 +1,7 @@
 /* eslint-disable linebreak-style */
 // importation des méthodes react
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 // importation des composants
 import Button from 'react-bootstrap/Button';
@@ -13,29 +14,12 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 // importation des styles
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.scss';
-import data from '../../../data/coins.json';
 
 function Header() {
-  const [coin, setCoin] = useState('');
-  const [foundCoins, setFoundCoins] = useState(data);
-
-  const filter = (e) => {
-    const keyword = e.target.value;
-
-    if (keyword !== '') {
-      const results = data.filter((coin) => {
-        return coin.id.toLowerCase().startsWith(keyword.toLowerCase());
-      });
-      setFoundCoins(results);
-    } else {
-      setFoundCoins(data);
-    }
-    setCoin(keyword);
-  };
   return (
     <Navbar expand="lg" className="header_navBar">
       <Container fluid>
-        <Navbar.Brand href="/">Menu</Navbar.Brand>
+        <Navbar.Brand className="header_menu" href="/">Menu</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -43,8 +27,8 @@ function Header() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="/">Top 100</Nav.Link>
-            <Nav.Link href="/simulator">Simulateur</Nav.Link>
+            <Nav.Link className="header_menu" href="/">Classement</Nav.Link>
+            <Nav.Link className="header_menu" href="/simulator">Simulateur</Nav.Link>
             <NavDropdown title="Liens utiles" id="navbarScrollingDropdown">
               <NavDropdown.Item href="https://etherscan.io/" target="_blank">
                 Etherscan
@@ -59,6 +43,7 @@ function Header() {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
+
           <Form className="d-flex">
             <Form.Control
               expand="xl"
@@ -66,10 +51,8 @@ function Header() {
               placeholder="Nom du projet"
               className="me-2"
               aria-label="Search"
-              value={coin}
-              onChange={filter}
             />
-            <Button variant="outline-success">Rechercher</Button>
+            <Button type="submit" className="btn btn-light">Rechercher</Button>
           </Form>
         </Navbar.Collapse>
       </Container>

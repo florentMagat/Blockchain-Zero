@@ -1,9 +1,21 @@
 .header_navBar{
     padding-left: 2rem;
     padding-right: 2rem;
-    background-color: rgba(247, 247, 250, 0.9);
+    background-color: #4C75A3;
     top: 0;
     position: sticky;
     z-index: 999;
-    color: #01040fe4;
+    font-weight: 400;
+}
+
+.me-2{
+    font-style: italic;
+}
+
+.header_menu{
+    color: white;
+}
+
+#navbarScrollingDropdown{
+    color: white;
 }
