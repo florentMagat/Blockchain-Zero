@@ -2,23 +2,23 @@
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Result from '../Result';
 
 function SearchedResults() {
-  const [data, setData] = useState({});
+  const { id } = useParams();
+  const [data, setData] = useState(null);
 
   // appel à axios afin de me connecter à l'API
-  if (!data) return null;
-  React.useEffect(() => {
-    const recherchedCoin = async () => {
-      const response = axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=24h');
-      setData(response.data);
-    };
-
-    recherchedCoin();
+  useEffect(() => {
+    axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=${id}&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=24h`)
+      .then((response) => {
+        setData(response.data);
+      });
   }, []);
+
+  if (!data) return null;
 
   // création d'un nouveau tableau grâce au .map et envoie de celui-ci vers Result
   return (

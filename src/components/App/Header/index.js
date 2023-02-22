@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 // importation des méthodes react
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // importation des composants
 import Button from 'react-bootstrap/Button';
@@ -16,6 +16,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.scss';
 
 function Header() {
+  const [word, setWord] = useState('');
+  const navigate = useNavigate();
+  let searchedCoin = `/coin/${word}`;
   return (
     <Navbar expand="lg" className="header_navBar">
       <Container fluid>
@@ -48,11 +51,12 @@ function Header() {
             <Form.Control
               expand="xl"
               type="search"
+              onChange={(e) => { setWord(e.target.value); }}
               placeholder="Nom du projet"
               className="me-2"
               aria-label="Search"
             />
-            <Button type="submit" className="btn btn-light">Rechercher</Button>
+            <Button type="submit" onClick={() => { navigate(searchedCoin); }} className="btn btn-light">Rechercher</Button>
           </Form>
         </Navbar.Collapse>
       </Container>
