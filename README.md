@@ -2,6 +2,8 @@
 
 Créer un site affichant le top 100 des cryptomonnaies (classées par marketcap) à jour avec une sélection d’informations utiles (prix unitaire, évolution durant les dernières 24 heures, liens,…).
 
+Une version V1 est en ligne : https://blockchain-zero.netlify.app/
+
 ## Etapes
 
 Tout d’abord recherche d’une API fiable et gratuite pour sourcer nos informations : CoinGecko API (https://www.coingecko.com/en/api/documentation)
