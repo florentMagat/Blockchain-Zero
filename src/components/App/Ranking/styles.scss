@@ -1,9 +1,13 @@
 .categories{
     display: flex;
     justify-content:center;
-    padding-left: 2vw;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding: 2vh 2vw 2vh 2vw;
     gap: 3vw;
     background-color: #fafafa6f;
+}
+
+@media (max-width: 500px) {
+    .categories{
+        flex-flow: column wrap;
+    }
 }

@@ -9,7 +9,6 @@ import NotFound from './NotFound';
 import Ranking from './Ranking';
 import Results from './Results';
 import SearchedResults from './SearchedResults';
-import Simulator from './Simulator';
 import Underconstruction from './Underconstruction';
 
 // importation des styles

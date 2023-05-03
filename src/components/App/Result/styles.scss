@@ -1,7 +1,7 @@
 .card-deck{
     display: flex;
     align-items: center;
-    margin: 1rem;
+    margin: 0.75rem;
     box-shadow: -0.25rem 0.25rem rgb(76, 117, 163, 0.3);
 }
 
@@ -17,7 +17,7 @@
 }
 
 .result_image{
-    max-width: 4vw;
+    width: 20%;
     justify-content: space-around;
     padding: 0.5rem 0.5rem 0 0;
 }

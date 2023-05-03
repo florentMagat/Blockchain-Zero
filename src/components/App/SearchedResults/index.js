@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
-import { React, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Result from '../Result';
 

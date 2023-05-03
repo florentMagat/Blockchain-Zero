@@ -18,7 +18,7 @@ import './styles.scss';
 function Header() {
   const [word, setWord] = useState('');
   const navigate = useNavigate();
-  let searchedCoin = `/coin/${word}`;
+  let searchedCoin = `/coin/${(word.toLowerCase())}`;
   return (
     <Navbar expand="lg" className="header_navBar">
       <Container fluid>
